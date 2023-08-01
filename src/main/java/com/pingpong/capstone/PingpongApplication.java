@@ -8,11 +8,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class PingpongApplication {
 
 	public static void main(String[] args) {
+		Dotenv dotenv = Dotenv.load();
+		String DB_PASSWORD = dotenv.get("DB_PASSWORD");
+		String DB_USERNAME = dotenv.get("DB_USERNAME");
+		System.setProperty("username", DB_USERNAME);
+		System.setProperty("password", DB_PASSWORD);
 
 		SpringApplication.run(PingpongApplication.class, args);
-		Dotenv dotenv = Dotenv.load();
-		String password = dotenv.get("DB_PASSWORD");
-		String username = dotenv.get("DB_USERNAME");
 	}
 
 }
