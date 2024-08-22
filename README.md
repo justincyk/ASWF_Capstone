@@ -6,5 +6,5 @@ This web application is used to track the match results of players playing ping 
 
 ## Technology:
 - Frontend: React with Vite and MUI
-- Backend: Spring Boot with Yarn as Gradle
+- Backend: Spring Boot with Yarn and Gradle
 - Data Storage: PostgreSQL
